@@ -1,5 +1,49 @@
 <template name="layout">
 
-    {{> yield }}
+  {{#ionBody}}
+
+  {{#ionSideMenuContainer side="right"}}
+
+    {{#ionSideMenus}}
+
+      {{#ionSideMenu side="right"}}
+        <div class="bar bar-header bar-stable">
+          <h1 class="title sidemenu-title">Limbo</h1>
+        </div>
+        <div class="content has-header">
+          <div class="list">
+            <a class="item item-icon-left" href="{{pathFor 'home'}}" data-ion-menu-close>
+              {{> ionIcon icon="close"}}
+              Close Menu
+            </a>
+            <a class="item item-icon-left sign-out" data-ion-menu-close>
+              {{> ionIcon icon="log-out"}}
+              Logout
+            </a>
+          </div>
+        </div>
+      {{/ionSideMenu}}
+
+    {{/ionSideMenus}}
+
+    {{#ionSideMenuContent}}
+
+      <!-- {{> ionNavBar class="bar-custom"}} -->
+
+      {{#ionNavView transition="slide-in-up"}}
+
+        {{> yield}}
+
+      {{/ionNavView}}
+
+      {{#ionFooterBar class="add-task-bar"}}
+        {{>addTaskBar isForAddTask=true isForBackToList=false }}
+      {{/ionFooterBar}}
+
+    {{/ionSideMenuContent}}
+
+  {{/ionSideMenuContainer}}
+
+{{/ionBody}}
 
 </template>

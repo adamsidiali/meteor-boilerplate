@@ -5,8 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 stylus
 fortawesome:fontawesome
 iron:router
@@ -16,3 +14,16 @@ tracker
 blaze
 accounts-google
 http
+service-configuration
+fastclick
+underscore
+peerlibrary:async
+chrismbeckett:toastr
+natestrauser:animate-css
+momentjs:moment
+meteoric:ionic-sass
+meteoric:ionicons-sass
+meteoric:ionic
+fourseven:scss@2.0.0
+meteor
+chriswessels:hammer

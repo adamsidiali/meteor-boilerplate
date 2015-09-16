@@ -1,0 +1,48 @@
+<template name="items">
+
+  {{#ionView}}
+    {{#ionContent}}
+
+    <div class="flex-wrapper">
+
+      {{#if hasMoreItems}}
+      <h4 class="load-more">Load More</h4>
+      {{/if}}
+
+    {{#ionList class="items-list"}}
+
+      {{#each items}}
+
+        {{#if done}}
+        {{#ionItem buttonRight=true avatar=false class="list-item animated fadeIn done-item"}}
+          <i class="fa fa-check sub-item unfinish-item"></i>
+          <div class="item-text" id="{{_id}}" type="text">{{item}}</div>
+          <!-- <ul class="item-actions">
+            <li class="tag-item"><i class="fa fa-tag"></i></li>
+            <li class="remove-item"><i class="fa fa-close"></i></li>
+          </ul> -->
+          <button class="button button-clear item-details">{{> ionIcon icon="ios-arrow-right"}}</button>
+        {{/ionItem}}
+        {{else}}
+        {{#ionItem buttonRight=true avatar=false class="list-item animated fadeIn"}}
+          <i class="fa fa-square-o sub-item finish-item"></i>
+          <div class="item-text not-done" id="{{_id}}" type="text">{{item}}</div>
+          <div contenteditable class="edit-item-text" type="text">{{item}}</div>
+          <!-- <ul class="item-actions">
+            <li class="tag-item"><i class="fa fa-tag"></i></li>
+            <li class="remove-item"><i class="fa fa-close"></i></li>
+          </ul> -->
+           <button class="button button-clear item-details">{{> ionIcon icon="ios-arrow-right"}}</button>
+        {{/ionItem}}
+        {{/if}}
+
+
+      {{/each}}
+    {{/ionList}}
+
+  </div>
+
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

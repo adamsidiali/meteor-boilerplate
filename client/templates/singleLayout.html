@@ -1,0 +1,16 @@
+<template name="singleLayout">
+
+  {{#ionBody}}
+
+      <!-- {{> ionNavBar class="bar-custom"}} -->
+
+      {{#ionNavView transition="slide-in-up"}}
+
+        {{> yield}}
+
+      {{/ionNavView}}
+
+
+{{/ionBody}}
+
+</template>

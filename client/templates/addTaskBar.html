@@ -1,0 +1,15 @@
+<template name="addTaskBar">
+
+  <i class="fa fa-bars toggle-menu" data-ion-menu-toggle="right"></i>
+
+  {{#if isForAddTask}}
+  <form class="add-task-form">
+    <input type="text" name="newTask" value="" placeholder="What do you need to do?">
+  </form>
+  {{/if}}
+
+  {{#if isForBackToList}}
+    {{>ionNavBackButton path="home" text=""}}
+  {{/if}}
+
+</template>

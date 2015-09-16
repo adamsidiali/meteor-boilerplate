@@ -1,0 +1,39 @@
+.login
+  display flex
+  display -webkit-flex
+  flex-flow column nowrap
+  justify-content center
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  width 100%
+  z-index 9999999999
+
+  img
+    height 100px
+    width 100px
+    flex 0 0 auto
+    margin 0 auto
+    margin-bottom 20px
+
+    @media (max-width:600px)
+      height 60px
+      width 60px
+
+  .login-google
+    margin 20px auto
+    padding 20px
+    background-color #4285f4
+    color #fff
+    border-radius 2px
+    transition 200ms ease-out
+
+    &:hover
+      cursor pointer
+      transition 200ms ease-out
+      background-color darken(#4285f4, 15%)
+
+    i
+      margin-right 5px

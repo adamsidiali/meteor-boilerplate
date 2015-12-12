@@ -15,10 +15,10 @@ check
 accounts-password
 stylus
 underscore
-coffeescript
 email
 fastclick
 kadira:flow-router
 kadira:blaze-layout
 momentjs:moment
 pagebakers:ionicons
+ecmascript
